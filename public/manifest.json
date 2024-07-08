@@ -7,10 +7,12 @@
     "extension_pages": "default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; img-src 'self' data:; style-src 'self';"
   },
   "action": {
-    "default_popup": "index.html",
     "default_icon": {
       "16": "assets/favicon.ico"
     }
+  },
+  "background": {
+    "service_worker": "background.js"
   },
   "commands": {
     "_execute_action": {
