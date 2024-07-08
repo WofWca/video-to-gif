@@ -5,6 +5,9 @@
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+
+  // So the popup is not narrow.
+  min-width: 400px;
 }
 
 button,

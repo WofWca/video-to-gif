@@ -32,6 +32,22 @@ export default defineConfig({
   base: './',
   build: {
     target: 'esnext',
+    rollupOptions: {
+      output: {
+        assetFileNames(chunkInfo) {
+          if (chunkInfo.name === 'favicon.ico') {
+            // Ensure that it has constant name so that we can reference it
+            // from `manifest.json`.
+            // TODO fix: Though it doesn't appear to be displayed
+            // anywhere anyway...
+            return 'assets/[name][extname]'
+          }
+          // Default value
+          // https://rollupjs.org/configuration-options/#output-assetfilenames
+          return 'assets/[name]-[hash][extname]'
+        },
+      }
+    }
   },
   define: {
     GIT_REVISION: JSON.stringify(GIT_REVISION)
