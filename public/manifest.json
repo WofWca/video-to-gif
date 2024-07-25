@@ -1,7 +1,7 @@
 {
-  "name": "Video to GIF",
-  "version": "1.0.0",
-  "description": "Convert video to GIF, locally",
+  "name": "__MSG_appName__",
+  "description": "__MSG_shortDesc__",
+  "version": "1.0.1",
   "permissions": [],
   "content_security_policy": {
     "extension_pages": "default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; img-src 'self' data:; style-src 'self';"
@@ -24,5 +24,6 @@
   "icons": {
     "16": "assets/favicon.ico"
   },
-  "manifest_version": 3
+  "manifest_version": 3,
+  "default_locale": "en"
 }
